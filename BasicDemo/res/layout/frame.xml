@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!--
+        FrameLayout 为每个加入其中的组件创建一个空白的区域（称为一帧），每个子组件占据一帧，
+        这些帧可以叠加，并会根据 gravity 属性执行自动对齐。
+        -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <!--依次定义几个TextView，先定义的TextView位于底层-->
+    <TextView android:id="@+id/view1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"
+          android:width="500px" android:height="500px" android:background="#f00"/>
+    <TextView android:id="@+id/view2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"
+              android:width="400px" android:height="400px" android:background="#0f0"/>
+</FrameLayout>

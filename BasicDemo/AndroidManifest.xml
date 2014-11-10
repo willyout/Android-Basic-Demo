@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.willyout.BasicDemo"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="15"/>
+
+    <!--如果需要隐藏Action Bar可以在你的Activity的属性中设置主题风格为NoTitleBar在你的manifest文件中，
+    下面的代码在3.0以前是隐藏标题，而在3.0以后就是隐藏ActionBar了
+    android:theme="@android:style/Theme.NoTitleBar"-->
+
+    <application android:name=".DemoApplication"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher">
+
+        <provider android:authorities="org.willyout.BasicDemo.data" android:name=".data.DictProvider" android:exported="true"/>
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".BroadCastActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_broadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".VideoPlayerActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_video">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CameraActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_camera">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActionBarActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_action">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".UIActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_ui">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DrawViewActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_draw">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".FrameActivity"
+                  android:launchMode="singleInstance"
+                  android:label="@string/app_name_frame">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".BCReceiver">
+            <intent-filter><action android:name="com.willyout.BasicDemo.broadcast"/></intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+</manifest>

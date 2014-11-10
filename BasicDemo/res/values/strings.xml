@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DemoBasic</string>
+    <string name="app_name_broadcast">DemoBroadCast</string>
+    <string name="broadcastTag">"com.willyout.BasicDemo.broadcast"</string>
+    <string name="app_name_video">DemoVideo</string>
+    <string name="app_name_camera">DemoCamera</string>
+    <string name="app_name_ui">DemoUI</string>
+    <string name="app_name_draw">DemoDraw</string>
+    <string name="app_name_frame">DemoFrameLayout</string>
+    <string name="app_name_action">DemoAction</string>
+    <color name="color1">#f00</color>
+    <color name="color2">#0f0</color>
+
+</resources>
+
